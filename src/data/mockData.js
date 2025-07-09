@@ -94,7 +94,7 @@ export const projectsData = [
     coBenefits: ["Air Quality", "Rural Employment"],
     description:
       "Large-scale solar photovoltaic project in Rajasthan generating clean energy and supporting local communities.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/solar.jpg",
     details: {
       co2Reduced: "27,850 tCO₂e",
       vintage: "2023",
@@ -114,7 +114,7 @@ export const projectsData = [
     coBenefits: ["Clean Energy", "Job Creation"],
     description:
       "Wind energy project contributing to India's renewable energy goals while providing sustainable employment.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/wind.jpg",
     details: {
       co2Reduced: "19,500 tCO₂e",
       vintage: "2023",
@@ -134,7 +134,7 @@ export const projectsData = [
     coBenefits: ["Air Quality", "Waste Reduction"],
     description:
       "Methane capture and utilization project reducing greenhouse gas emissions from coal mining operations.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/methane.jpg",
     details: {
       co2Reduced: "39,500 tCO₂e",
       vintage: "2022",
