@@ -40,7 +40,7 @@ export function RetirementTable({ data }) {
       <Card className="mb-8">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle className="text-lg font-semibold text-gray-600">
+            <CardTitle className="text-[10px] md:text-lg font-semibold text-gray-600">
               Retirement Ledger & Verifier Docs
             </CardTitle>
             <Button
@@ -49,7 +49,7 @@ export function RetirementTable({ data }) {
               onClick={() => setIsCollapsed(!isCollapsed)}
               className="flex items-center space-x-1 bg-green-600 hover:bg-green-700 hover:text-white border-none"
             >
-              <span className="text-sm">
+              <span className="text-[10px] md:text-sm">
                 {isCollapsed ? "Expand" : "Collapse"}
               </span>
               {isCollapsed ? (
