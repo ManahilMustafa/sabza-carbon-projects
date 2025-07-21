@@ -11,8 +11,8 @@ export function Header() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2  rounded-lg">
-              <div className="p-2 ">
+            <div className="p-1  rounded-lg">
+              <div >
   <img
     src="/logo.png" // 🖼 Replace this path with your logo path
     alt="Logo"
@@ -20,10 +20,10 @@ export function Header() {
   />
 </div>
             </div>
-            <div>
+            {/* <div>
               <h1 className="text-[16px] lg:text-xl font-bold text-gray-900">SABZA</h1>
               <p className="text-sm text-gray-600">Carbon Dashboard</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
