@@ -20,10 +20,10 @@ export function Header() {
   />
 </div>
             </div>
-            {/* <div>
-              <h1 className="text-[16px] lg:text-xl font-bold text-gray-900">SABZA</h1>
+            <div>
+              {/* <h1 className="text-[16px] lg:text-xl font-bold text-gray-900">SABZA</h1> */}
               <p className="text-sm text-gray-600">Carbon Dashboard</p>
-            </div> */}
+            </div>
           </div>
         </div>
 
