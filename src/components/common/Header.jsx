@@ -11,8 +11,14 @@ export function Header() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 bg-green-100 rounded-lg">
-              <Leaf className="h-6 w-6 text-green-600" />
+            <div className="p-2  rounded-lg">
+              <div className="p-2 ">
+  <img
+    src="/logo.png" // 🖼 Replace this path with your logo path
+    alt="Logo"
+    className="h-16 w-19 object-contain"
+  />
+</div>
             </div>
             <div>
               <h1 className="text-[16px] lg:text-xl font-bold text-gray-900">SABZA</h1>

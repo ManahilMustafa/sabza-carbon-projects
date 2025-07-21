@@ -15,7 +15,7 @@ export function Dashboard({ metrics, monthlyData, projectTypeData }) {
       </div>
 
       {/* KPIs + Charts */}
-      <div className="max-w-full mx-auto space-y-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         <KPICards metrics={metrics} />
         <Charts monthlyData={monthlyData} projectTypeData={projectTypeData} />
       </div>
