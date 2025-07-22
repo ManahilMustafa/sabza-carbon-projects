@@ -44,7 +44,7 @@ export function ProofModal({ isOpen, onClose, record }) {
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4 text-gray-500" />
                 <div>
-                  <p className="text-sm text-gray-600">Date Retired</p>
+                  <p className="text-sm text-gray-600">Validated Date</p>
                   <p className="text-sm font-medium">{record.dateRetired}</p>
                 </div>
               </div>
