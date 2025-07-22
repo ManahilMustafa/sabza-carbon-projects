@@ -3,6 +3,8 @@ import { Dashboard } from "./components/Dashboard"
 import { TokenRetirement } from "./components/TokenRetirement"
 import { ProjectPortfolio } from "./components/ProjectPortfolio"
 import { esgMetrics, monthlyOffsetsData, projectTypeData, retirementData, projectsData } from "./data/mockData"
+import { ValidationTable } from "./components/Validation/ValidationLedger"
+import { ValidationLedger } from "./components/Validation"
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
         <Dashboard metrics={esgMetrics} monthlyData={monthlyOffsetsData} projectTypeData={projectTypeData} />
 
         {/* Token Retirement Section */}
+        <ValidationLedger data={retirementData} />
         <TokenRetirement data={retirementData} />
 
         {/* Project Portfolio Section */}
