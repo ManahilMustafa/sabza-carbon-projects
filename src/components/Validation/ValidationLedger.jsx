@@ -165,7 +165,7 @@ export function ValidationTable({ data }) {
                       {r.registry}
                     </p>
                   <div className="text-sm text-gray-700">
-                    <strong>Retired:</strong> {r.dateRetired}
+                    <strong>Validated:</strong> {r.dateRetired}
                   </div>
                   <div className="break-words text-sm text-gray-600">
                     <strong>IPFS:</strong> {r.ipfsHash}
