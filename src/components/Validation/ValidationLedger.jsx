@@ -68,7 +68,9 @@ export function ValidationTable({ data }) {
               <table className="table-auto w-full border-collapse">
                 <thead>
                   <tr className="border-b bg-gray-50">
-                    {[
+                    {["Project Name ",
+                    "Project ID",
+                    "Registry",
                       "Date Validated",
                       "IPFS Hash",
                       "View Proof",
@@ -91,12 +93,11 @@ export function ValidationTable({ data }) {
                         i % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      <td className="py-2 px-4 text-sm text-gray-700">
-                        {r.dateRetired}
-                      </td>
-                      <td className="py-2 px-4 break-words font-mono text-sm text-gray-600">
-                        {r.ipfsHash}
-                      </td>
+                        <td className="py-2 px-4 text-sm text-gray-700">{r.name}</td>
+                      <td className="py-2 px-4 text-sm text-gray-700">{r.id}</td>
+                      <td className="py-2 px-4 text-sm text-gray-700">{r.registry}</td>
+                      <td className="py-2 px-4 text-sm text-gray-700">{r.dateRetired}</td>
+                      <td className="py-2 px-4 break-words font-mono text-sm text-gray-600">{r.ipfsHash}</td>
                       <td className="py-2 px-4">
                         <Button
                           variant="link"
