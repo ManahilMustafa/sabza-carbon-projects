@@ -82,7 +82,7 @@ export const retirementData = [
 // Projects Data
 export const projectsData = [
   {
-    id: 1,
+    id: "6909",
     title: "Rajasthan Solar PV",
     subtitle: "India",
     location: "India",
@@ -102,7 +102,7 @@ export const projectsData = [
     },
   },
   {
-    id: 2,
+    id: "1509",
     title: "Wind Farm Tray",
     subtitle: "Wind registered",
     location: "Maharashtra, India",
@@ -122,7 +122,7 @@ export const projectsData = [
     },
   },
   {
-    id: 3,
+    id: "GS23254",
     title: "Methane Recovery, Columbia",
     subtitle: "Coal Seam Gas",
     location: "Columbia",

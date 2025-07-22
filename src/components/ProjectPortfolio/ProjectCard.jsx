@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Zap, Award, ExternalLink } from "lucide-react"
+import { toast } from "sonner"
 
 
 export function ProjectCard({ project, onViewDetails }) {
@@ -57,7 +58,13 @@ const handleViewCertificate = (project) => {
 
       <CardHeader className="pb-3">
         <div className="space-y-2">
-          <h3 className="font-semibold text-lg text-gray-900 leading-tight">{project.title}</h3>
+           <div className="flex items-center gap-2">
+                                <h3 className="font-semibold text-lg text-gray-900 leading-tight">{project.title}</h3>
+                                 <Badge className="bg-blue-100 text-blue-900" variant="secondary">
+                                  Id-{project.id}
+                                </Badge>
+                                </div>
+  
           <p className="text-sm text-gray-600">{project.subtitle}</p>
           <div className="flex items-center space-x-1 text-sm text-gray-500">
             <MapPin className="h-4 w-4" />

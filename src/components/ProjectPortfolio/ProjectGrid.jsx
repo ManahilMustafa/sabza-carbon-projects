@@ -114,8 +114,14 @@ export function ProjectGrid({ projects }) {
 
                   <div className="space-y-4">
                     <div>
+                      <div className="flex items-center gap-2">
                       <h2 className="text-2xl font-bold text-gray-900">{selectedProject.title}</h2>
+                       <Badge className={getStatusColor(selectedProject.status)} variant="secondary">
+                        Id-{selectedProject.id}
+                      </Badge>
+                      </div>
                       <p className="text-gray-600">{selectedProject.subtitle}</p>
+                      
                     </div>
 
                     <div className="flex items-center space-x-2 text-gray-600">
