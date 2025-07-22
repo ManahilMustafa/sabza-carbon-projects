@@ -135,9 +135,11 @@ export function ValidationTable({ data }) {
                 >
                   <div className="flex justify-between items-center">
                     <span className="font-mono text-sm text-blue-600">
-                      {r.tokenId}
+                      {r.name}
                     </span>
+                    
                     <div className="flex space-x-2">
+                    
                       <Button
                         variant="link"
                         size="sm"
@@ -156,6 +158,12 @@ export function ValidationTable({ data }) {
                       </Button>
                     </div>
                   </div>
+                    <p className="font-mono text-sm text-gray-800">
+                      {r.id}
+                    </p>
+                    <p className="font-mono text-sm text-gray-800">
+                      {r.registry}
+                    </p>
                   <div className="text-sm text-gray-700">
                     <strong>Retired:</strong> {r.dateRetired}
                   </div>

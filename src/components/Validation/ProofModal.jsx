@@ -37,8 +37,8 @@ export function ProofModal({ isOpen, onClose, record }) {
               <div className="flex items-center space-x-2">
                 <Hash className="h-4 w-4 text-gray-500" />
                 <div>
-                  <p className="text-sm text-gray-600">Token ID</p>
-                  <p className="font-mono text-sm font-medium">{record.tokenId}</p>
+                  <p className="text-sm text-gray-600">Project ID</p>
+                  <p className="font-mono text-sm font-medium">{record.id}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
