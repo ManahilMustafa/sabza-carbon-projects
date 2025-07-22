@@ -35,7 +35,7 @@ export function KPICards({ metrics }) {
     },
     {
       icon: CheckCircle,
-      label: "ESG Score",
+      label: "SABZA Score",
       value: metrics.esgScore,
       color: "text-emerald-600",
       bgColor: "bg-emerald-50",
