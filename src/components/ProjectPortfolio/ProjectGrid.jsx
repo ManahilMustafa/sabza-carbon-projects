@@ -114,12 +114,18 @@ export function ProjectGrid({ projects }) {
 
                   <div className="space-y-4">
                     <div>
-                      <div className="flex items-center gap-2">
-                      <h2 className="text-2xl font-bold text-gray-900">{selectedProject.title}</h2>
-                       <Badge className={getStatusColor(selectedProject.status)} variant="secondary">
-                        Id-{selectedProject.id}
-                      </Badge>
-                      </div>
+                      <div className="flex flex-wrap items-start justify-between gap-2">
+  <div className="flex flex-wrap items-center gap-2">
+    <h2 className="text-2xl font-bold text-gray-900">{selectedProject.title}</h2>
+    <Badge className={getStatusColor(selectedProject.status)} variant="secondary">
+      Id-{selectedProject.id}
+    </Badge>
+  </div>
+  <Badge className="bg-green-100 text-green-900 border border-green-300 px-2 py-1 text-sm font-semibold whitespace-nowrap">
+    CO₂ Price ($/Tonne): ${selectedProject.price}
+  </Badge>
+</div>
+
                       <p className="text-gray-600">{selectedProject.subtitle}</p>
                       
                     </div>
@@ -205,24 +211,35 @@ export function ProjectGrid({ projects }) {
                 </div>
 
                 {/* Interactive Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4 ">
-                  <Button 
-                    variant="outline" 
-                    onClick={() => handleViewCertificate(selectedProject)}
-                    className="flex items-center space-x-2 text-green-600 border-green-500 hover:bg-green-50 hover:text-green-700 hover:border-green-600 transition-colors"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    <span>View Certificate</span>
-                  </Button>
-                  
-                  <Button  
-                    onClick={() => handleDownloadReport(selectedProject)}
-                    className="flex items-center space-x-2 text-white bg-green-600 hover:bg-green-700 transition-colors"
-                  >
-                    <FileText className="h-4 w-4" />
-                    <span>Download Report</span>
-                  </Button>
-                </div>
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+  <Button 
+    variant="outline" 
+    onClick={() => handleViewCertificate(selectedProject)}
+    className="bg-green-700 flex items-center space-x-2 text-white border-green-500 hover:bg-green-500  hover:border-green-600 transition-colors"
+  >
+    <ExternalLink className="h-4 w-4" />
+    <span>View Certificate</span>
+  </Button>
+  
+  <Button  
+    onClick={() => handleDownloadReport(selectedProject)}
+    className="flex items-center space-x-2 text-white bg-green-600 hover:bg-green-700 transition-colors"
+  >
+    <FileText className="h-4 w-4" />
+    <span>Download Report</span>
+  </Button>
+
+  <Button  
+    onClick={() => toast.success("Purchase option coming soon!")}
+    className="flex items-center space-x-2 text-white bg-green-600 hover:bg-green-700 transition-colors"
+  >
+    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/>
+    </svg>
+    <span>Buy</span>
+  </Button>
+</div>
+
               </div>
             </>
           )}

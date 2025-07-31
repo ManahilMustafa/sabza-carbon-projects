@@ -3,9 +3,8 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Zap, Award, ExternalLink } from "lucide-react"
+import { MapPin, Zap, Award, ExternalLink, ShoppingCart } from "lucide-react"
 import { toast } from "sonner"
-
 
 export function ProjectCard({ project, onViewDetails }) {
   const getTypeColor = (type) => {
@@ -32,21 +31,20 @@ export function ProjectCard({ project, onViewDetails }) {
         return "bg-gray-100 text-gray-800"
     }
   }
-const handleViewCertificate = (project) => {
-    // Mock certificate viewing functionality
+
+  const handleViewCertificate = (project) => {
     const certificateUrl = `https://certificates.sabza.com/project/${project.id}`
-    
-    // Show loading state (you can add a toast notification here)
     console.log(`Opening certificate for ${project.title}...`)
-    
-    // Simulate opening certificate in new tab
     window.open(certificateUrl, '_blank')
-    
-    // Show success notification (mock)
     setTimeout(() => {
-     toast(`Certificate for ${project.title} opened successfully!`)
+      toast(`Certificate for ${project.title} opened successfully!`)
     }, 500)
   }
+
+  const handleBuy = () => {
+    toast.success("Purchase option coming soon!")
+  }
+
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -56,27 +54,37 @@ const handleViewCertificate = (project) => {
         </div>
       </div>
 
-      <CardHeader className="pb-3">
-        <div className="space-y-2">
-           <div className="flex items-center gap-2">
-                                <h3 className="font-semibold text-lg text-gray-900 leading-tight">{project.title}</h3>
-                                 <Badge className="bg-blue-100 text-blue-900" variant="secondary">
-                                  Id-{project.id}
-                                </Badge>
-                                </div>
-  
-          <p className="text-sm text-gray-600">{project.subtitle}</p>
-          <div className="flex items-center space-x-1 text-sm text-gray-500">
-            <MapPin className="h-4 w-4" />
-            <span>{project.location}</span>
-          </div>
-        </div>
-      </CardHeader>
+     <CardHeader className="pb-3">
+  <div className="space-y-2">
+    {/* Title + ID */}
+    <div className="flex flex-wrap items-center gap-2">
+      <h3 className="font-semibold text-lg text-gray-900 leading-tight">{project.title}</h3>
+      <Badge className="bg-blue-100 text-blue-900" variant="secondary">
+        Id-{project.id}
+      </Badge>
+    </div>
+
+    {/* CO₂ Price badge, always below title */}
+    <div className="flex justify-end">
+      <Badge className="bg-green-100 text-green-900 border border-green-300 px-2 py-1 text-sm font-semibold whitespace-nowrap">
+        CO₂ Price ($/Tonne): ${project.price}
+      </Badge>
+    </div>
+
+    {/* Subtitle + Location */}
+    <p className="text-sm text-gray-600">{project.subtitle}</p>
+    <div className="flex items-center space-x-1 text-sm text-gray-500">
+      <MapPin className="h-4 w-4" />
+      <span>{project.location}</span>
+    </div>
+  </div>
+</CardHeader>
+
 
       <CardContent className="flex-1 flex flex-col">
         <div className="space-y-3 flex-1">
           <div className="grid grid-cols-2 gap-3 text-sm">
-            <div className="flex items-center space-x-1 ">
+            <div className="flex items-center space-x-1">
               <Zap className="h-4 w-4 text-yellow-500" />
               <span className="text-gray-600">Capacity:</span>
             </div>
@@ -87,6 +95,8 @@ const handleViewCertificate = (project) => {
               <span className="text-gray-600">CO₂ Offset:</span>
             </div>
             <span className="font-medium text-gray-600">{project.offset.toLocaleString()} tCO₂e</span>
+
+            
           </div>
 
           <div className="space-y-2">
@@ -117,12 +127,16 @@ const handleViewCertificate = (project) => {
         </div>
 
         <div className="pt-4 mt-4 border-t space-y-2">
-          <Button onClick={() => onViewDetails(project)} className="w-full text-green-600">
+          <Button onClick={() => onViewDetails(project)} className="w-full text-green-600 hover:text-black">
             View Details
           </Button>
-          <Button  onClick={() => handleViewCertificate(project)}  className="w-full flex items-center justify-center space-x-2 bg-green-600 px-4 py-2 rounded">
+          <Button onClick={() => handleViewCertificate(project)} className="w-full flex items-center justify-center space-x-2 text-white bg-green-600 px-4 py-2 rounded">
             <ExternalLink className="h-4 w-4" />
             <span>View Certificate</span>
+          </Button>
+          <Button onClick={handleBuy} className="w-full flex items-center justify-center space-x-2 text-white bg-green-600 px-4 py-2 rounded">
+            <ShoppingCart className="h-4 w-4" />
+            <span>Buy</span>
           </Button>
         </div>
       </CardContent>
