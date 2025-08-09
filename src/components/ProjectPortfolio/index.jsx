@@ -1,11 +1,15 @@
 import { ProjectGrid } from "./ProjectGrid"
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select"
 import { Search } from "lucide-react"
+=======
+>>>>>>> c963a435262d4ee35b00d29a9664cc4c711a2c27
 
 export function ProjectPortfolio({ projects }) {
   return (
     <div className="space-y-6">
+<<<<<<< HEAD
       {/* Top Section: Title + Filters */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
@@ -44,4 +48,14 @@ export function ProjectPortfolio({ projects }) {
       <ProjectGrid projects={projects} />
     </div>
   );
+=======
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-1">Retirement Proof - Impact You're Supporting</h2>
+        <p className="text-gray-600">Explore the verified carbon offset projects</p>
+      </div>
+
+      <ProjectGrid projects={projects} />
+    </div>
+  )
+>>>>>>> c963a435262d4ee35b00d29a9664cc4c711a2c27
 }
