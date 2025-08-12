@@ -1,23 +1,19 @@
 import { ProjectGrid } from "./ProjectGrid"
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select"
 import { Search } from "lucide-react"
-=======
->>>>>>> c963a435262d4ee35b00d29a9664cc4c711a2c27
 
 export function ProjectPortfolio({ projects }) {
   return (
     <div className="space-y-6">
-<<<<<<< HEAD
       {/* Top Section: Title + Filters */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-1">
-            Retirement Proof - Impact You're Supporting
+            Double Counting Proof - Impact You're Supporting
           </h2>
           <p className="text-gray-600">
-            Explore the verified carbon offset projects
+            Explore the verified carbon offset projects.
           </p>
         </div>
 
@@ -25,8 +21,8 @@ export function ProjectPortfolio({ projects }) {
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 focus:outline-none focus:ring-0 focus:border-gray-300" />
-            <Input placeholder="Search projects..." className="pl-9 w-64 focus:outline-none focus:ring-0 focus:border-gray-300" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <Input placeholder="Search projects..." className="pl-9 w-64" />
           </div>
 
           {/* Dropdown */}
@@ -48,14 +44,4 @@ export function ProjectPortfolio({ projects }) {
       <ProjectGrid projects={projects} />
     </div>
   );
-=======
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-1">Retirement Proof - Impact You're Supporting</h2>
-        <p className="text-gray-600">Explore the verified carbon offset projects</p>
-      </div>
-
-      <ProjectGrid projects={projects} />
-    </div>
-  )
->>>>>>> c963a435262d4ee35b00d29a9664cc4c711a2c27
 }
